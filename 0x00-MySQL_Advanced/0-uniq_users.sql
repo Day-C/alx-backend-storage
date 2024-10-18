@@ -1,0 +1,6 @@
+-- create users table
+
+CREATE TABLE IF NOT EXISTS users (
+	id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	email VARCHAR(225) NOT NULL,
+	name VARCHAR(225))
