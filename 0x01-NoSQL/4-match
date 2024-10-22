@@ -1,0 +1,2 @@
+// fetch a particular documents with  sertain text
+db.school.find({name: "Holberton school"})
