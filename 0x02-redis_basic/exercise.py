@@ -2,6 +2,7 @@
 """redis db class."""
 import redis
 import uuid
+from typing import Union
 
 
 class Cache():
@@ -13,7 +14,7 @@ class Cache():
         self._redis = redis.Redis()
         self._redis.flushdb()
 
-    def store(self, data: str | bytes | int | float) -> str:
+    def store(self, data: Union[str, int, bytes, float]) -> str:
         """Insert data into the redis db."""
 
         key = str(uuid.uuid4())
