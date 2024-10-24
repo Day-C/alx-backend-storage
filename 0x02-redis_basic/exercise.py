@@ -7,13 +7,13 @@ import uuid
 class Cache():
     """Manages the communication ith the redis db."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Initialize connection start and end values."""
 
         self._redis = redis.Redis()
         self._redis.flushdb()
 
-    def store(self, data) -> str:
+    def store(self, data: str | bytes | int | float) -> str:
         """Insert data into the redis db."""
 
         key = str(uuid.uuid4())
